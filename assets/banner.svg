@@ -1,0 +1,77 @@
+<svg width="1200" height="380" viewBox="0 0 1200 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="15%" cy="20%" r="55%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="90%" cy="85%" r="55%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="55%" stop-color="#a5b4fc"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <linearGradient id="dialGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="380" fill="url(#bgGrad)"/>
+  <rect width="1200" height="380" fill="url(#glow1)"/>
+  <rect width="1200" height="380" fill="url(#glow2)"/>
+
+  <!-- subtle dot grid -->
+  <g opacity="0.12">
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.2" fill="#94a3b8"/>
+    </pattern>
+    <rect width="1200" height="380" fill="url(#dots)"/>
+  </g>
+
+  <!-- floating glass shapes for depth -->
+  <rect x="900" y="40" width="220" height="220" rx="28" fill="url(#cardGrad)" stroke="rgba(99,102,241,0.25)" stroke-width="1" transform="rotate(18 1010 150)"/>
+  <rect x="40" y="210" width="160" height="160" rx="24" fill="url(#cardGrad)" stroke="rgba(6,182,212,0.2)" stroke-width="1" transform="rotate(-12 120 290)"/>
+
+  <!-- Debt distress dial motif, top-right -->
+  <g transform="translate(1030,150)" filter="url(#softBlur)" opacity="0.5">
+    <circle r="70" fill="url(#dialGrad)"/>
+  </g>
+  <g transform="translate(1030,150)">
+    <circle r="62" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="10"/>
+    <circle r="62" fill="none" stroke="url(#dialGrad)" stroke-width="10" stroke-linecap="round"
+      stroke-dasharray="292" stroke-dashoffset="90" transform="rotate(-90)"/>
+    <text x="0" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">72%</text>
+  </g>
+
+  <!-- Title block -->
+  <text x="90" y="150" font-family="Arial, sans-serif" font-size="30" font-weight="600" letter-spacing="6" fill="#64748b">
+    BLOGFORGE
+  </text>
+  <text x="88" y="215" font-family="Arial, sans-serif" font-size="66" font-weight="800" fill="url(#titleGrad)">
+    AI-Powered Debt Relief
+  </text>
+  <text x="88" y="265" font-family="Arial, sans-serif" font-size="66" font-weight="800" fill="url(#titleGrad)">
+    &amp; Financial Recovery
+  </text>
+
+  <text x="90" y="308" font-family="Arial, sans-serif" font-size="21" fill="#94a3b8">
+    Debt analysis · Settlement prediction · AI-drafted hardship letters
+  </text>
+
+  <!-- bottom accent line -->
+  <rect x="88" y="330" width="180" height="4" rx="2" fill="url(#titleGrad)"/>
+</svg>

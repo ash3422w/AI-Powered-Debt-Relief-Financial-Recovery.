@@ -1,0 +1,81 @@
+<svg width="1100" height="620" viewBox="0 0 1100 620" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="g1" cx="10%" cy="10%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="95%" cy="95%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6366f1"/>
+    </marker>
+  </defs>
+
+  <rect width="1100" height="620" fill="url(#bg)"/>
+  <rect width="1100" height="620" fill="url(#g1)"/>
+  <rect width="1100" height="620" fill="url(#g2)"/>
+
+  <text x="550" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f8fafc">Solution Architecture</text>
+  <text x="550" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#64748b">Decoupled client–server flow, from the browser to the database</text>
+
+  <!-- USER LAYER -->
+  <rect x="400" y="100" width="300" height="60" rx="16" fill="url(#card)" stroke="#334155" stroke-width="1.2"/>
+  <text x="550" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">👤 USER LAYER</text>
+  <text x="550" y="146" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Borrower interacting via the browser</text>
+
+  <line x1="550" y1="160" x2="550" y2="192" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="566" y="180" font-family="Arial, sans-serif" font-size="11" fill="#64748b">HTTPS + JWT</text>
+
+  <!-- PRESENTATION LAYER -->
+  <rect x="350" y="196" width="400" height="66" rx="16" fill="url(#card)" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1.2"/>
+  <text x="550" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#a5b4fc">🖥️ PRESENTATION LAYER</text>
+  <text x="550" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">React.js (Vite) SPA · glassmorphic dark UI</text>
+
+  <line x1="550" y1="262" x2="550" y2="294" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="566" y="282" font-family="Arial, sans-serif" font-size="11" fill="#64748b">REST API</text>
+
+  <!-- API ROUTER LAYER -->
+  <rect x="300" y="298" width="500" height="66" rx="16" fill="url(#card)" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1.2"/>
+  <text x="550" y="324" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#a5b4fc">🧭 API ROUTER LAYER</text>
+  <text x="550" y="346" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">FastAPI · CORS · JWT middleware</text>
+
+  <!-- branch lines to two service cards -->
+  <line x1="440" y1="364" x2="270" y2="410" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="660" y1="364" x2="830" y2="410" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- FINANCIAL ENGINE -->
+  <rect x="90" y="414" width="360" height="80" rx="16" fill="url(#card)" stroke="#06b6d4" stroke-opacity="0.4" stroke-width="1.2"/>
+  <text x="270" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#67e8f9">📊 FINANCIAL PROCESSING ENGINE</text>
+  <text x="270" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">DTI &amp; EMI ratios · stress level</text>
+  <text x="270" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">settlement % prediction</text>
+
+  <!-- GEN-AI LAYER -->
+  <rect x="650" y="414" width="360" height="80" rx="16" fill="url(#card)" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.2"/>
+  <text x="830" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#6ee7b7">✨ GEN-AI LAYER</text>
+  <text x="830" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Google Gemini API</text>
+  <text x="830" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">hardship letter compiling</text>
+
+  <line x1="270" y1="494" x2="500" y2="536" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="830" y1="494" x2="600" y2="536" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- DATABASE LAYER -->
+  <rect x="360" y="540" width="380" height="66" rx="16" fill="url(#card)" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.2"/>
+  <text x="550" y="566" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#fcd34d">🗄️ DATABASE LAYER</text>
+  <text x="550" y="588" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">SQLAlchemy ORM → SQLite (local) / PostgreSQL (prod)</text>
+
+  <rect x="30" y="30" width="140" height="6" rx="3" fill="url(#accent)"/>
+</svg>
